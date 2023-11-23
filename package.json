@@ -1,0 +1,26 @@
+{
+  "name": "vue-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "csuxzy",
+  "description": "vue相关学习文档",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xzy0625/vue-docs"
+  },
+  "keywords": [
+    "vitepress",
+    "blog",
+    "typescript",
+    "githu pages"
+  ],
+  "devDependencies": {
+    "vitepress": "^1.0.0-beta.5"
+  }
+}
