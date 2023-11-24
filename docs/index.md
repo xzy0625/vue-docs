@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /blogs/blog1/
+      link: /blogs/start/start
     - theme: alt
       text: GitHub
       link: https://github.com/xzy0625/vue-docs
