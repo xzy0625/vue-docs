@@ -43,6 +43,9 @@ yarn dev
 1. https://juejin.cn/post/7161320316285747231
 2. https://juejin.cn/post/7070109475419455519
 
+## 启用评论
+https://github.com/Justin3go/justin3go.github.io/blob/8a23802018209e1510626e780439ecbc8d4bb05d/docs/%E5%8D%9A%E5%AE%A2/2023/06/06%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96%E4%B8%8B%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%A6%96%E9%A1%B5(%E8%BF%81%E7%A7%BBvitepress-beta%E7%89%88).md#L21
+
 ## 其他配置
 
 `docs/.vitepress/config.js`文件的内容请参照vitepress自行配置
