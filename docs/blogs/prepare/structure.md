@@ -70,7 +70,9 @@
 5. 经过**patch**处理，将**dom结构**呈现在页面上
 6. 当响应式依赖变化的时候执行对应的副作用函数
 
-在源码执行的时候，我们实例上挂载的`render`函数就是连接`compiler`和`runtime`的桥梁。`compiler`模块将我们的模版编译成`render`函数。`runtime`部分：组件挂载的时候运行`render`函数生成`vnode`（虚拟dom），运行`render`函数的时候会访问到我们的响应式变量，这时候就会将页面渲染的副作用函数添加到依赖中去，最后通过`patch`函数将虚拟dom生成真实dom挂载在页面上。
+在源码执行的时候，我们实例上挂载的`render`函数就是连接`compiler`和`runtime`的桥梁。`compiler`模块将我们的模版编译成`render`函数。`runtime`部分：组件挂载的时候运行`render`函数生成`vnode`（虚拟dom），运行`render`函数的时候会访问到我们的响应式变量，这时候就会将页面渲染的副作用函数添加到依赖中去，最后通过`patch`函数将虚拟dom生成真实dom挂载在页面上。整个流程如下入所示
+
+![Alt text](../../public/render.png)
 
 ## 模块关系图
 

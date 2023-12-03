@@ -94,7 +94,11 @@ export default {
           items: [
             {
               text: "响应式概览",
-              link: "/blogs/raective/",
+              link: "/blogs/reactive/",
+            },
+            {
+              text: "Reactive & ref",
+              link: "/blogs/reactive/reactive_ref",
             },
           ],
         },
