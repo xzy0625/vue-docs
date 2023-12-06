@@ -1,16 +1,16 @@
 import { headerPlugin } from './headerPlugin'
 
 export default {
-  title: "vue3.3.8源码解析", // 博客的标题
-  description: "vue3.3.8相关学习文档", // 博客的介绍
+  title: "vue3源码解析", // 博客的标题
+  description: "vue3源码解析", // 博客的介绍
   base: "/vue-docs/", // 根路径,如果想用github.io访问这个必填，需和github仓库名字一致 【https://vitejs.cn/vitepress/guide/deploy.html#github-pages-%E5%92%8C-travis-ci】
   lastUpdated: true, // 开启最后更新时间
   themeConfig: {
     logo: "/images/logo.png", // 页面上显示的logo
     algolia: {
-      appId: '94RGZI7OSQ',
-      apiKey: '5d80235956f58d7af794ee20612b15ba', // 这里是algolia的key和indexName，请自行前往申请
-      indexName: 'vue-docs',
+      appId: 'MVMNAC3H5Z',
+      apiKey: '8f79ce6a0636cc5034de86b6178dfb8a', // 这里是algolia的key和indexName，请自行前往申请
+      indexName: 'vueDocs',
       placeholder: '请输入关键词',
       buttonText: '搜索',
     },
@@ -97,8 +97,16 @@ export default {
               link: "/blogs/reactive/",
             },
             {
-              text: "Reactive & ref",
-              link: "/blogs/reactive/reactive_ref",
+              text: "reactive & ref",
+              link: "/blogs/reactive/reactive&ref",
+            },
+            {
+              text: "track & trigger",
+              link: "/blogs/reactive/track&trigger",
+            },
+            {
+              text: "reactiveEffect",
+              link: "/blogs/reactive/reactiveEffect",
             },
           ],
         },
@@ -123,6 +131,38 @@ export default {
             {
               text: "编译概览",
               link: "/blogs/compiler/",
+            },
+          ],
+        },
+        {
+          text: "核心工具",
+          collapsed: false,
+          items: [
+            {
+              text: "调度器scheduler",
+              link: "/blogs/utils/scheduler",
+            },
+          ],
+        },
+        {
+          text: "常用api",
+          collapsed: false,
+          items: [
+            {
+              text: "watch",
+              link: "/blogs/apis/watch",
+            },
+            {
+              text: "computed",
+              link: "/blogs/apis/computed",
+            },
+            {
+              text: "nextTick",
+              link: "/blogs/apis/nextTick",
+            },
+            {
+              text: "forceUpdate",
+              link: "/blogs/apis/forceUpdate",
             },
           ],
         },

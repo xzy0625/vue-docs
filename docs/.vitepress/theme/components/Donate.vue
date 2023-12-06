@@ -1,0 +1,50 @@
+<template>
+  <div class="vp-doc" style="margin-bottom: 64px">
+    <h2 id="写在最后" tabindex="-1">
+      写在最后
+      <a
+        class="header-anchor"
+        href="#写在最后"
+        aria-label='Permalink to "写在最后"'
+        >&ZeroWidthSpace;</a
+      >
+    </h2>
+    码字不易，还请大家点击右上角为项目多多star，如果觉得文章质量不错的话，可以请作者喝杯咖啡，所有捐赠人员都会放入致谢中。非常感谢～
+    <div class="donate">
+      <Popover title="微信">
+        <template #content>
+          <Image
+            :width="250"
+            style="padding: 20px"
+            src="/images/wechatpay.jpeg"
+          />
+        </template>
+        <WechatOutlined :style="{ fontSize: '36px', color: '#64b687' }" />
+      </Popover>
+      <Popover title="支付宝">
+        <template #content>
+          <Image
+            :width="250"
+            style="padding: 0px 20px 20px 20px"
+            src="/images/alipay.jpeg"
+          />
+        </template>
+        <AlipayCircleOutlined :style="{ fontSize: '36px', color: '#08c' }" />
+      </Popover>
+    </div>
+  </div>
+</template>
+<script setup>
+import { AlipayCircleOutlined, WechatOutlined } from "@ant-design/icons-vue";
+import { Popover, Image } from "ant-design-vue";
+</script>
+<style>
+.donate {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: calc((100% - 150px) / 2);
+  margin-right: calc((100% - 150px) / 2);
+  margin-top: 8px;
+}
+</style>

@@ -1,5 +1,5 @@
 {
-  "index_name": "vue-docs",
+  "index_name": "vueDocs",
   "start_urls": ["https://xzy0625.github.io/vue-docs/"],
   "rateLimit": 8,
   "maxDepth": 10,

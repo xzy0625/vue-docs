@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: vue源码解析
+  name: vue3源码解析
   text: 基于vue3.3.8，从源码层面深入解析vue技术
   image:
     src: /images/logo.png

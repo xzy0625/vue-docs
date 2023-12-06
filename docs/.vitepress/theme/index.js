@@ -1,7 +1,9 @@
 import { h } from "vue";
 import DefaultTheme from "vitepress/theme";
-import comment from "./components/comment.vue";
+import Comment from "./components/comment.vue";
+import Donate from "./components/Donate.vue";
 import "./styles/index.css";
+
 
 /**
  * https://vitepress.dev/guide/extending-default-theme
@@ -11,7 +13,8 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      "doc-after": () => h(comment),
+      "doc-after": () => h(Comment),
+      "doc-footer-before": () => h(Donate),
     });
   },
   enhanceApp({ app, router, siteData }) {

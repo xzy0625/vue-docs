@@ -322,7 +322,8 @@ function createArrayInstrumentations() {
 
 可以看到对于**`includes, indexOf, lastIndexOf`**每一个函数都做了以下几件事
 
-1. 遍历数组每一项，调用`track`收集依赖
+1. 遍历数组每一项，调用`track`收集依赖。
+
 2. 先用传进来的值去查找，如果没有找到的话就用`toRow`之后的值再去比较一次。主要是为了防止原始值和代理对象做比较的情况
 
 ```javascript
@@ -344,6 +345,29 @@ console.log(proxy.indexOf(obj)); // 0
 我们注意到这些方法都会改变数组的长度，重写这些方法主要是为了防止死循环，具体issues(#2137)。
 
 ```js
+const arr = [1, 2, 3, 4, 5, 6];
+
+const proxy = new Proxy(arr, {
+  get(target, key) {
+    console.log('get', key);
+    return Reflect.get(target, key);
+  },
+  set(target, key, value) {
+    console.log('set', key, value);
+    return Reflect.set(target, key, value);
+  },
+});
+
+proxy.push(7);
+输出： get push
+输出: get length
+输出: set 6 7
+输出：set length 7
+```
+
+可以看看到，我们访问调用`push`的时候也会触发`length`的`get`和`set`。所以会出现如下情况。
+
+```js
 const arr = []
 const proxyArr = reactive(arr)
 watchEffect(() => {
@@ -360,33 +384,33 @@ watchEffect(() => {
 
 ```js
 export function ref(value?: unknown) {
-  return createRef(value, false)
+  return createRef(value, false) // 调用createRef
 }
 
 function createRef(rawValue: unknown, shallow: boolean) {
-  if (isRef(rawValue)) {
+  if (isRef(rawValue)) { // 已经是ref了就返回
     return rawValue
   }
-  return new RefImpl(rawValue, shallow)
+  return new RefImpl(rawValue, shallow) // 实例化ref
 }
 
 class RefImpl<T> {
-  private _value: T
-  private _rawValue: T
+  private _value: T // 存value
+  private _rawValue: T // 存原始值
 
-  public dep?: Dep = undefined
-  public readonly __v_isRef = true
+  public dep?: Dep = undefined // 存依赖
+  public readonly __v_isRef = true // 表示是ref类型
 
   constructor(
     value: T,
     public readonly __v_isShallow: boolean
   ) {
     this._rawValue = __v_isShallow ? value : toRaw(value)
-    this._value = __v_isShallow ? value : toReactive(value) // 不是浅响应式的就调用reactive搞一把
+    this._value = __v_isShallow ? value : toReactive(value) // 是不是浅响应式主要就是就没有调用toReactive进行深度依赖
   }
 
   get value() {
-    trackRefValue(this) // 直接.value百分百响应式
+    trackRefValue(this) // 调用ref.value救护执行get触发trackRefValue收集依赖。
     return this._value
   }
 
@@ -394,13 +418,16 @@ class RefImpl<T> {
     const useDirectValue =
       this.__v_isShallow || isShallow(newVal) || isReadonly(newVal)
     newVal = useDirectValue ? newVal : toRaw(newVal)
-    if (hasChanged(newVal, this._rawValue)) { // 新旧值不一样就触发下
+    if (hasChanged(newVal, this._rawValue)) { // 新旧值不一样就触发下triggerRefValue
       this._rawValue = newVal
-      this._value = useDirectValue ? newVal : toReactive(newVal) // 每次set也会进行深度响应
+      this._value = useDirectValue ? newVal : toReactive(newVal) // 每次set也会进行深度响应处理。所以ref.value = xx。这个xx也是响应式的
       triggerRefValue(this, newVal)
     }
   }
 }
 ```
 
-`ref`函数的实现比较简单
+`ref`类的实现比较简单。主要是创建一个包含`set`/`get`的对象。注意到我们的`ref`底层其实还是会调用`reactive`进行深度响应的处理。在`set`/`get`中有两个函数`trackRefValue`和`triggerRefValue`这个和我们上面提到的`track`和`trriger`一样用来做依赖收集和触发的。后面会统一讲解。
+
+## 小结
+
