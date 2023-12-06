@@ -16,7 +16,7 @@
           <Image
             :width="250"
             style="padding: 20px"
-            src="/images/wechatpay.jpeg"
+            :src="withBase('/images/wechatpay.jpeg')"
           />
         </template>
         <WechatOutlined :style="{ fontSize: '36px', color: '#64b687' }" />
@@ -26,7 +26,7 @@
           <Image
             :width="250"
             style="padding: 0px 20px 20px 20px"
-            src="/images/alipay.jpeg"
+            :src="withBase('/images/alipay.jpeg')"
           />
         </template>
         <AlipayCircleOutlined :style="{ fontSize: '36px', color: '#08c' }" />
@@ -37,6 +37,8 @@
 <script setup>
 import { AlipayCircleOutlined, WechatOutlined } from "@ant-design/icons-vue";
 import { Popover, Image } from "ant-design-vue";
+import { withBase } from 'vitepress'
+
 </script>
 <style>
 .donate {
