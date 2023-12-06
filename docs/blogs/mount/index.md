@@ -852,7 +852,7 @@ const componentUpdateFn = () => { // 组件的更新函数,在这里面处理的
 
 我们现在不需要关注`renderComponentRoot`具体做了什么，只需要知道他也会返回`vnode`对象，然后放在`instance.subTree`中。在我们这个例子中返回的`vnode`如下。
 
-<img src="assets/image-20231204212202040.png" alt="image-20231204212202040" style="zoom:50%;" />
+<img src="./assets/image-20231204212202040.png" alt="image-20231204212202040" style="zoom:50%;" />
 
 `shapFlag`为9，所以在`patch`中我们会走到`processElement`
 

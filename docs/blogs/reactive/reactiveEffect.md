@@ -4,7 +4,7 @@
 
 在`vue`中一共会有三个地方会产生副作用。组件渲染`render`，`watch`函数，`computed`函数。这个也是符合我们认知的。在这三个函数实现的地方都会调用`new ReactiveEffect()`来实例化副作用
 
-<img src="assets/image-20231204162809583.png" alt="image-20231204162809583" style="zoom:50%;" />
+<img src="./assets/image-20231204162809583.png" alt="image-20231204162809583" style="zoom:50%;" />
 
 接下来我们就重点关注`ReactiveEffect`这个类。
 
