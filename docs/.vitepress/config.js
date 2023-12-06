@@ -7,6 +7,7 @@ export default {
   lastUpdated: true, // 开启最后更新时间
   themeConfig: {
     logo: "/images/logo.png", // 页面上显示的logo
+    // algolia搜索 https://blog.csdn.net/weixin_42429718/article/details/128361258
     algolia: {
       appId: 'MVMNAC3H5Z',
       apiKey: '8f79ce6a0636cc5034de86b6178dfb8a', // 这里是algolia的key和indexName，请自行前往申请
