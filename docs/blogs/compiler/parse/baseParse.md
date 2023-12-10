@@ -246,3 +246,14 @@ while 的遍历解析是整个解析过程中的重点，但是我们没有必�
 
 了解完大概内容之后我们在对单独的类型解析进行分析吧。相关文章：
 
+### [parseInterpolation](/blogs/compiler/parse/parseInterpolation)
+
+### [parseText](/blogs/compiler/parse/parseText)
+
+### [parseComment](/blogs/compiler/parse/parseComment)
+
+### [parseElement](/blogs/compiler/parse/parseElement)
+
+### [parseTag](/blogs/compiler/parse/parseTag)
+
+### [parseAttributes](/blogs/compiler/parse/parseAttributes)

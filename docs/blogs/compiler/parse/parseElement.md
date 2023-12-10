@@ -125,7 +125,7 @@ function parseElement(
 
 1. 标记是否在`pre 标签`内
 2. 标记是否在`v-pre 指令`内
-3. 调用`parseTag`获取当前元素。[`parseTag`已单独放置为一篇]('/blogs/compiler/parse/parseTag')
+3. 调用`parseTag`获取当前元素。[`parseTag`已单独放置为一篇](/blogs/compiler/parse/parseTag)
 4. 如果是自闭合标签就不用解析子节点了，直接返回就行
 
 ### 解析子节点
