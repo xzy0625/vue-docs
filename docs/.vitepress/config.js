@@ -26,8 +26,9 @@ export default {
     nav: [
       // 页面右上角的导航
       { text: "🌊react18源码解析", link: "https://xzy0625.github.io/react-docs/" },
+      { text: "🌞前端知识日积月累", link: "https://xzy0625.github.io/js-interview/" },
       { text: "🔥前端算法(编写中)", link: "/blogs/start/start" },
-      { text: "💭学习圈子(编写中)", link: "/blogs/start/start" },
+      { text: "💭个人主页", link: "http://zyxiong.com/" },
       {
         text: "其他",
         items: [

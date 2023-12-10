@@ -299,3 +299,10 @@ queuePostFlushCb(post1)
 
 最后结果为依次打印：`pre2 pre1 normal post1 post2`
 
+## 推荐阅读
+
+有了上述基础，建议大家继续阅读以下章节，它们都和调度有关
+
+1. [watch实现原理](/blogs/apis/watch)
+2. [forceUpdate实现原理](/blogs/apis/forceUpdate)
+3. [nextTick实现原理](/blogs/apis/nextTick)

@@ -37,6 +37,8 @@
 <script setup>
 import { AlipayCircleOutlined, WechatOutlined } from "@ant-design/icons-vue";
 import { Popover, Image } from "ant-design-vue";
+
+// 静态资源需呀是用withBase()函数包起来。https://vitepress.docschina.org/guide/assets.html#base-url
 import { withBase } from 'vitepress'
 
 </script>
