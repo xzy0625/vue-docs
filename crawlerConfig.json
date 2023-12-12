@@ -30,7 +30,7 @@
   "js_render": true,
   "initialIndexSettings": {
     "vueDocs": {
-      "attributesForFaceting": ["searchable(lang)"]
+      "attributesForFaceting": ["lang"]
     }
   }
 }
