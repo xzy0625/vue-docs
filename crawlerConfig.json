@@ -27,5 +27,10 @@
     ".next-and-prev-link",
     ".table-of-contents"
   ],
-  "js_render": true
+  "js_render": true,
+  "initialIndexSettings": {
+    "vueDocs": {
+      "attributesForFaceting": ["searchable(lang)"]
+    }
+  }
 }
