@@ -32,5 +32,8 @@
     "vueDocs": {
       "attributesForFaceting": ["lang"]
     }
+  },
+  "custom_settings": {
+    "attributesForFaceting": ["lang"]
   }
 }
