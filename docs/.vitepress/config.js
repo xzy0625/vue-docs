@@ -13,6 +13,8 @@ export default {
     // 这里有一个坑，vitepress会自动给请求带上facetFilter属性，所以我们在crawlerConfig中必须配置lang,然后还要在后台配置facet，添加lang
     // https://dashboard.algolia.com/apps/MVMNAC3H5Z/explorer/configuration/vueDocs/facets
     // https://docsearch.algolia.com/docs/api#searchparameters @doSearch文档
+    // https://www.algolia.com/doc/tools/crawler/apis/configuration/ algolia爬虫配置
+    // https://github.com/signcl/docsearch-scraper-action signcl/docsearch-scraper-action@master自动触发algolia爬虫
     // https://juejin.cn/post/7157340749065895944
     algolia: {
       appId: 'MVMNAC3H5Z',

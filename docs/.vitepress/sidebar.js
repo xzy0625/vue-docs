@@ -46,16 +46,6 @@ export const sidebar = [
     ],
   },
   {
-    text: "初次渲染",
-    collapsed: false,
-    items: [
-      {
-        text: "初次渲染概览",
-        link: "/blogs/mount/",
-      },
-    ],
-  },
-  {
     text: "响应式核心",
     collapsed: false,
     items: [
@@ -78,6 +68,20 @@ export const sidebar = [
     ],
   },
   {
+    text: "挂载阶段",
+    collapsed: false,
+    items: [
+      {
+        text: "初次渲染概览",
+        link: "/blogs/mount/",
+      },
+      {
+        text: "虚拟dom",
+        link: "/blogs/mount/vnode",
+      },
+    ],
+  },
+  {
     text: "更新阶段",
     collapsed: false,
     items: [
@@ -88,6 +92,16 @@ export const sidebar = [
       {
         text: "diff算法",
         link: "/blogs/update/diff",
+      },
+    ],
+  },
+  {
+    text: "卸载阶段",
+    collapsed: false,
+    items: [
+      {
+        text: "卸载概览",
+        link: "/blogs/unmount/",
       },
     ],
   },
@@ -170,6 +184,10 @@ export const sidebar = [
       {
         text: "forceUpdate",
         link: "/blogs/apis/forceUpdate",
+      },
+      {
+        text: "组件生命周期",
+        link: "/blogs/apis/lifecycle",
       },
     ],
   },
