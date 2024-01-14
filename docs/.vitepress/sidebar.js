@@ -196,8 +196,12 @@ export const sidebar = [
     collapsed: false,
     items: [
       {
-        text: "keep-alive",
+        text: "KeepAlive",
         link: "/blogs/inner-component/keep-alive",
+      },
+      {
+        text: "Teleport",
+        link: "/blogs/inner-component/Teleport",
       },
     ],
   },
