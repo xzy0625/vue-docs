@@ -32,6 +32,15 @@
         <AlipayCircleOutlined :style="{ fontSize: '36px', color: '#08c' }" />
       </Popover>
     </div>
+    也可关注我的公众号，会持续分享学习和生活的感悟~
+    <div class="mp">
+      <div>
+        <Image
+          :height="150"
+          :src="withBase('/images/mp.png')"
+        />
+      </div>
+    </div>
   </div>
 </template>
 <script setup>
@@ -50,5 +59,12 @@ import { withBase } from 'vitepress'
   margin-left: calc((100% - 150px) / 2);
   margin-right: calc((100% - 150px) / 2);
   margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.mp {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 </style>

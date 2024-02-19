@@ -1,6 +1,6 @@
 import { h } from "vue";
 import DefaultTheme from "vitepress/theme";
-import Comment from "./components/comment.vue";
+import Comment from "./components/Comment.vue";
 import Donate from "./components/Donate.vue";
 import "./styles/index.css";
 
