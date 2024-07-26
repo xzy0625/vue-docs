@@ -17,8 +17,8 @@ export default {
     // https://github.com/signcl/docsearch-scraper-action signcl/docsearch-scraper-action@master自动触发algolia爬虫
     // https://juejin.cn/post/7157340749065895944
     algolia: {
-      appId: 'MVMNAC3H5Z',
-      apiKey: '8f79ce6a0636cc5034de86b6178dfb8a', // 这里是algolia的key和indexName，请自行前往申请
+      appId: 'D94EDD00F5',
+      apiKey: 'bf07a324f3bac23a0b30902b43975e55', // 这里是algolia的key和indexName，请自行前往申请
       indexName: 'vueDocs',
       placeholder: '请输入关键词',
       buttonText: '搜索',
